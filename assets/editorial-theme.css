@@ -1,0 +1,79 @@
+/* Steff by Step · warm editorial palette.
+   Keep layout and interaction architecture untouched.
+   This stylesheet overrides the older dark-blue presentation. */
+:root {
+  --bg: #faf8f3;
+  --surface: #fffdfa;
+  --surface-2: #f2eee7;
+  --line: #dcd6cd;
+  --navy: #282723;
+  --muted: #5b5853;
+  --sky: #eee5d8;
+  background: var(--bg);
+  color: var(--navy);
+}
+body { background: var(--bg); color: var(--navy); }
+.site-header {
+  background: rgba(250, 248, 243, .97);
+  border-bottom-color: var(--line);
+}
+.site-header nav a, .lead, .section-heading > p:last-child {
+  color: #57544e;
+}
+.hero {
+  background: #faf8f3;
+  border-bottom-color: var(--line);
+}
+.bubble { background: #fffdfa; box-shadow: 7px 7px 0 var(--sky); }
+.bubble.en { background: #282723; border-color: #282723; }
+.bubble.en small { color: #ded9d1; }
+
+/* Instead of a dark-blue slab, present the method as light editorial cards. */
+.process {
+  background: #f3efe8;
+  color: #282723;
+  border-bottom: 1px solid var(--line);
+}
+.process .eyebrow { color: #995038; }
+.process .section-heading > p:last-child { color: #5b5853; }
+.steps { background: var(--line); border-color: var(--line); }
+.steps li { background: #fffdfa; color: #282723; }
+.steps p { color: #5b5853; }
+.steps li > span { background: #e9c56b; color: #282723; }
+.steps li:nth-child(2) > span { background: #d95b4b; color: #fff; }
+.steps li:nth-child(3) > span { background: #3658a5; color: #fff; }
+
+/* Light teaching material and clearly readable practice text. */
+.lesson-sheet { background: #fffdfa; box-shadow: 8px 8px 0 var(--sky); }
+.practice {
+  background: #f3eee4;
+  color: #282723;
+  border-left: 4px solid #d95b4b;
+}
+.test-section { background: #f2eee7; }
+.options label span, .result { background: #fffdfa; }
+.course { background: #faf8f3; }
+.status-strip { background: #f2eee7; }
+.faq { background: #fffdfa; }
+
+/* Waitlist no longer reads as another dark-blue code section. */
+.signup {
+  background: #eee9e1;
+  color: #282723;
+  border-top: 1px solid var(--line);
+}
+.signup .eyebrow { color: #995038; }
+.signup > div > p:last-child { color: #5b5853; }
+.waitlist { background: #fffdfa; border-color: #d2cabe; }
+
+/* Restrict dark color to a small neutral footer, not full page sections. */
+footer { background: #282723; color: #fff; }
+footer p { color: #ded9d1; }
+footer a { color: #efcf75; }
+@media (width <= 900px) {
+  .hero { background: #faf8f3; }
+}
+@media (width <= 520px) {
+  .bubble { box-shadow: 5px 5px 0 var(--sky); }
+  .lesson-sheet { box-shadow: 5px 5px 0 var(--sky); }
+}
